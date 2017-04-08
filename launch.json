@@ -2,23 +2,17 @@
     "version": "0.2.0",
     "configurations": [
         {
+            // Debug legacy grunt build process
             "type": "node",
             "request": "launch",
             "name": "run grunt",
             "protocol": "inspector",
             "program": "/Users/jmoses/n/bin/grunt",
-            "args": ["cssmin"],
+            // "args": ["cssmin"],s
             "restart": true,
             "port": 5858,
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen"
-        },
-        {
-            "type": "chrome",
-            "request": "launch",
-            "name": "Launch Chrome against localhost",
-            "url": "http://localhost:8080",
-            "webRoot": "${workspaceRoot}/src/webapp-mms"
         },
         {   // works with npm tool chrome-debug (start it on a page then enable this)
             // note: doesn't work with sourcemaps on minified bundles' (missing sourceRoot perhaps?)
