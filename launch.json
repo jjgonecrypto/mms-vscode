@@ -1,6 +1,7 @@
 {
     "version": "0.2.0",
     "configurations": [
+
         {
             // Debug legacy grunt build process
             "type": "node",
@@ -14,6 +15,20 @@
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen"
         },
+        {
+            // Debug npm
+            "type": "node",
+            "request": "launch",
+            "name": "npm compile v2",
+            "protocol": "inspector",
+            "runtimeExecutable": "node",
+            "args": ["./scripts/web/browserify", "-x", "-w", "v2"],
+            "restart": true,
+            "port": 5858,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        },
+
         {   // works with npm tool chrome-debug (start it on a page then enable this)
             // note: doesn't work with sourcemaps on minified bundles' (missing sourceRoot perhaps?)
             "type": "chrome",
