@@ -3,19 +3,6 @@
     "configurations": [
 
         {
-            // Debug legacy grunt build process
-            "type": "node",
-            "request": "launch",
-            "name": "run grunt",
-            "protocol": "inspector",
-            "program": "/Users/jmoses/n/bin/grunt",
-            // "args": ["cssmin"],s
-            "restart": true,
-            "port": 5858,
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen"
-        },
-        {
             // Debug npm
             "type": "node",
             "request": "launch",
@@ -24,7 +11,19 @@
             "runtimeExecutable": "node",
             "args": ["./scripts/web/browserify", "-x", "-w", "v2"],
             "restart": true,
-            "port": 5858,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen"
+        },
+
+        {
+            // Debug npm
+            "type": "node",
+            "request": "launch",
+            "name": "npm run test:node",
+            "protocol": "inspector",
+            "runtimeExecutable": "node",
+            "runtimeArgs": ["scripts/web/mocha.js", "v1"],
+            "restart": true,
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen"
         },
