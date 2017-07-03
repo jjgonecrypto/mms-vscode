@@ -19,10 +19,10 @@
             // Debug npm
             "type": "node",
             "request": "launch",
-            "name": "npm run test:node",
+            "name": "unit tests in node",
             "protocol": "inspector",
             "runtimeExecutable": "node",
-            "runtimeArgs": ["scripts/web/mocha.js", "v1"],
+            "runtimeArgs": ["scripts/web/mocha.js", "-j", "v1"],
             "restart": true,
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen"

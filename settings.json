@@ -4,6 +4,7 @@
         "/Users/jmoses/.ivy2/cache",
         "${workspaceRoot}/src/main"
     ],
+    "editor.minimap.enabled": false,
     // "eslint.autoFixOnSave": true,
     "editor.snippetSuggestions": "top"
 }
