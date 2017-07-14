@@ -9,7 +9,7 @@
             "name": "npm compile v2",
             "protocol": "inspector",
             "runtimeExecutable": "node",
-            "args": ["./scripts/web/browserify", "-x", "-w", "v2"],
+            "args": ["./scripts/web/webpack", "-w", "v2"],
             "restart": true,
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen"
@@ -22,10 +22,23 @@
             "name": "unit tests in node",
             "protocol": "inspector",
             "runtimeExecutable": "node",
-            "runtimeArgs": ["scripts/web/mocha.js", "-j", "v1"],
+            "runtimeArgs": ["scripts/web/mocha.js", "**/InvoiceSummary.spec.js"],
             "restart": true,
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen"
+        },
+
+        {
+            "name": "Run mocha",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/scripts/web/mocha.js",
+            "stopOnEntry": false,
+            // "args": ["test/**/*.js", "--no-timeouts"],
+            "args": ["**/InvoiceSummary.spec.js"],
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": null,
+            "env": { "NODE_ENV": "test"}
         },
 
         {   // works with npm tool chrome-debug (start it on a page then enable this)
