@@ -3,12 +3,19 @@
         "target": "ES6",
         "module": "commonjs",
         "allowSyntheticDefaultImports": true,
-        "baseUrl": "src/webapp-mms/static/",
+        "baseUrl": "src/webapp-mms/static",
         "paths": {
-          "*": "*"
+            "*": ["*"]
         }
     },
     "exclude": [
-        "node_modules", "build", "src/features/**/*", "src/main/**/*", "src/unit/**/*", "src/test/**/*"
+        "node_modules",
+        "build",
+        "src/main",
+        "src/unit",
+        "src/features",
+        "src/test",
+        "src/webapp-mms/static/dist",
+        "src/webapp-mms/static/assets"
     ]
 }

@@ -2,7 +2,8 @@
     "javac-linter.classpath": [
         "${workspaceRoot}/build/java/classes",
         "/Users/jmoses/.ivy2/cache",
-        "${workspaceRoot}/src/main"
+        "${workspaceRoot}/src/main",
+        "${workspaceRoot}/lib-local"
     ],
     "editor.minimap.enabled": false,
     // "eslint.autoFixOnSave": true,
