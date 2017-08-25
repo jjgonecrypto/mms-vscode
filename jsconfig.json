@@ -2,14 +2,13 @@
     "compilerOptions": {
         "target": "ES6",
         "module": "commonjs",
-        "allowSyntheticDefaultImports": true,
+        "baseUrl": ".",
         "paths": {
             "*": ["*"]
         }
     },
-    "exclude": [
-        "node_modules",
-        "dist",
-        "assets"
+    "include": [
+        "js",
+        "test"
     ]
 }
