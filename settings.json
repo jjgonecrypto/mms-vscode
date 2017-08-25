@@ -7,5 +7,6 @@
     ],
     "editor.minimap.enabled": false,
     // "eslint.autoFixOnSave": true,
-    "editor.snippetSuggestions": "top"
+    "editor.snippetSuggestions": "top",
+    "java.configuration.updateBuildConfiguration": "automatic"
 }
