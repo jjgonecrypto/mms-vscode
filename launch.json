@@ -9,20 +9,7 @@
             "name": "npm compile v2",
             "protocol": "inspector",
             "runtimeExecutable": "node",
-            "args": ["./scripts/web/webpack", "-w", "v2"],
-            "restart": true,
-            "console": "integratedTerminal",
-            "internalConsoleOptions": "neverOpen"
-        },
-
-        {
-            // Debug npm
-            "type": "node",
-            "request": "launch",
-            "name": "unit tests in node",
-            "protocol": "inspector",
-            "runtimeExecutable": "node",
-            "runtimeArgs": ["scripts/web/mocha.js", "**/InvoiceSummary.spec.js"],
+            "args": ["./scripts/webpack", "-w", "v2"],
             "restart": true,
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen"
@@ -32,12 +19,12 @@
             "name": "Run mocha",
             "type": "node",
             "request": "launch",
-            "program": "${workspaceRoot}/scripts/web/mocha.js",
-            "stopOnEntry": false,
-            // "args": ["test/**/*.js", "--no-timeouts"],
-            "args": ["**/InvoiceSummary.spec.js"],
-            "cwd": "${workspaceRoot}",
-            "runtimeExecutable": null,
+            "protocol": "inspector",
+            "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+            "runtimeArgs": [
+                "--nolazy"
+            ],
+            "args":["--require", "${workspaceRoot}/test/mochaTestSetup.js", "--no-timeouts", "${file}"],
             "env": { "NODE_ENV": "test"}
         },
 

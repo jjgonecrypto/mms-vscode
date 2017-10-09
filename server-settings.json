@@ -1,0 +1,12 @@
+{
+    "workbench.colorTheme": "Base16 Dark Bespin",
+
+    "files.exclude": {
+        ".idea/*": true,
+        "out/*": true,
+        "build/*": true
+    },
+    "java.configuration.updateBuildConfiguration": "automatic"
+    // "java.trace.server": "messages",
+    ,"java.home": "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home"
+}

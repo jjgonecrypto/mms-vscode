@@ -6,7 +6,9 @@
         "${workspaceRoot}/lib-local"
     ],
     "editor.minimap.enabled": false,
-    // "eslint.autoFixOnSave": true,
+    "editor.formatOnSave": false,
     "editor.snippetSuggestions": "top",
-    "java.configuration.updateBuildConfiguration": "automatic"
+    "git.ignoreLimitWarning": true,
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "prettier.eslintIntegration": true
 }
